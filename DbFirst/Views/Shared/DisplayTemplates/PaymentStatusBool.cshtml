@@ -1,0 +1,22 @@
+﻿@model bool?
+@{
+    string stringValue = String.Empty;
+
+        if (Model.HasValue)
+        {
+            if (Model.Value == true)
+            {
+                stringValue = "Paid";
+            }
+            else
+            {
+                stringValue = "Not Paid";
+            }
+        }
+        else
+        {
+                stringValue = "Not Set";
+        }
+ }
+
+@Html.Raw(stringValue)
